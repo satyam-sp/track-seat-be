@@ -49,9 +49,11 @@ class Api::V1::MoviesController < ApplicationController
      @number_of_seats = params[:number_of_seats].nil? ? 1 : params[:number_of_seats]
      if @rows > 10
       render json: {error: "row should be 10"},status: 400
+      return false
      end
      if @seats.empty?
        render json: {error: "Please select at least one seat"},status: 400
+       return false
      end
      
      if @number_of_seats.to_i > JSON.parse(@seats.to_json).length
