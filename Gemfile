@@ -7,6 +7,9 @@ ruby '2.4.9'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
+
+gem 'track_seats_ruby', :git => "git://github.com/satyam-sp/track_seats_ruby.git", :branch => "master"
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

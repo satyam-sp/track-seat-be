@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/satyam-sp/track_seats_ruby.git
+  revision: 0f57baf6ad6f3da6a960a2eccfbff72779cfda20
+  branch: master
+  specs:
+    track_seats_ruby (0.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,7 +55,7 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     bindex (0.8.1)
-    bootsnap (1.4.6)
+    bootsnap (1.4.7)
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
@@ -73,16 +80,16 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
-    dotenv (2.7.5)
-    dotenv-rails (2.7.5)
-      dotenv (= 2.7.5)
-      railties (>= 3.2, < 6.1)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    i18n (1.8.3)
+    i18n (1.8.4)
       concurrent-ruby (~> 1.0)
     io-like (0.3.1)
     jbuilder (2.10.0)
@@ -212,6 +219,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
+  track_seats_ruby!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

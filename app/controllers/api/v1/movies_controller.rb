@@ -32,10 +32,8 @@ class Api::V1::MoviesController < ApplicationController
 
 
   def track_seats
-    seats_from_center = Movie.find_best_seat(@rows,@columns)
-    avail_seats = Movie.seats(JSON.parse(@seats.to_json))
-    response = Movie.get_best_seats(seats_from_center,avail_seats,@number_of_seats)
-    
+    #track_seats_ruby gem for find best seat from front to center 
+    response = TrackSeatsRuby::TrackSeat.best_seat(@rows,@columns,JSON.parse(@seats.to_json),@number_of_seats)
     render json: {response: response},status: 200
   end
 
@@ -55,9 +53,9 @@ class Api::V1::MoviesController < ApplicationController
        render json: {error: "Please select at least one seat"},status: 400
        return false
      end
-     
-     if @number_of_seats.to_i > JSON.parse(@seats.to_json).length
-      render json: {error: "Number of seats should be less or equal to selected seats"},status: 400
+   
+     if @number_of_seats.to_i >= JSON.parse(@seats.to_json).length
+      render json: {error: "Number of seats should be less to selected seats"},status: 400
      end
   end
 
